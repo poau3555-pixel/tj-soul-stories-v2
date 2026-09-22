@@ -1,0 +1,6 @@
+# robots.txt for TJ Sugar Quest
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://tjsugarquest.com/sitemap.xml

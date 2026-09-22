@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <title>TJ Sugar Quest - Free Online Match-3 Candy Puzzle Game</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Play TJ Sugar Quest online for free! Match vibrant candies, trigger explosive special combos, and conquer 15 exciting levels across 5 sweet worlds. Mobile-friendly, instant play in your browser.">
+  <meta name="keywords" content="TJ Sugar Quest, match 3 game, candy puzzle, free online game, casual game, browser game, mobile match 3, html5 game">
+  <meta name="author" content="TJ Sugar Quest Team">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#4A148C">
+  <link rel="canonical" href="https://tjsugarquest.com">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tjsugarquest.com">
+  <meta property="og:title" content="TJ Sugar Quest - Free Online Match-3 Candy Puzzle Game">
+  <meta property="og:description" content="Swap, match, and blast delicious candies across 15 magical levels! Play instantly in your browser on mobile, tablet, or desktop.">
+  <meta property="og:site_name" content="TJ Sugar Quest">
+  <meta property="og:image" content="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='315' viewBox='0 0 600 315'><rect width='600' height='315' fill='%232A0845'/><circle cx='300' cy='157' r='100' fill='%23FF4081'/><text x='300' y='175' font-size='48' fill='white' font-family='sans-serif' text-anchor='middle' font-weight='bold'>TJ SUGAR QUEST</text></svg>">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TJ Sugar Quest - Free Online Match-3 Candy Puzzle Game">
+  <meta name="twitter:description" content="Match colorful candies and unleash rainbow blasts across 15 levels. 100% Free instant browser play!">
+  <meta name="twitter:image" content="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='315' viewBox='0 0 600 315'><rect width='600' height='315' fill='%232A0845'/><circle cx='300' cy='157' r='100' fill='%23FF4081'/><text x='300' y='175' font-size='48' fill='white' font-family='sans-serif' text-anchor='middle' font-weight='bold'>TJ SUGAR QUEST</text></svg>">
+
+  <!-- Favicon (Inline SVG candy logo - loads instantly with zero HTTP requests) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='cg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23FF4081'/%3E%3Cstop offset='100%25' stop-color='%237C4DFF'/%3E%3C/linearGradient%3E%3CradialGradient id='hl' cx='35%25' cy='35%25' r='50%25'%3E%3Cstop offset='0%25' stop-color='%23FFFFFF' stop-opacity='0.8'/%3E%3Cstop offset='100%25' stop-color='%23FFFFFF' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='32' cy='32' r='26' fill='url(%23cg)' stroke='%23FFD54F' stroke-width='3'/%3E%3Cellipse cx='25' cy='22' rx='10' ry='6' fill='url(%23hl)'/%3E%3Cpath d='M16 32 C 24 16, 40 48, 48 32' stroke='%23FFFFFF' stroke-width='3.5' stroke-linecap='round' fill='none' opacity='0.85'/%3E%3Ccircle cx='46' cy='20' r='3.5' fill='%23FFD54F'/%3E%3C/svg%3E">
+
+  <!-- Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =========================================================
+       WEBSITE HEADER & NAVIGATION
+       ========================================================= -->
+  <header id="site-header">
+    <div class="header-container">
+      <a href="#hero" class="site-logo" aria-label="TJ Sugar Quest Home">
+        <svg class="site-logo-icon" viewBox="0 0 64 64">
+          <circle cx="32" cy="32" r="28" fill="url(#headerGrad)" stroke="#FFD54F" stroke-width="3"/>
+          <defs>
+            <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FF4081"/>
+              <stop offset="50%" stop-color="#E040FB"/>
+              <stop offset="100%" stop-color="#7C4DFF"/>
+            </linearGradient>
+          </defs>
+          <path d="M18 32 C 26 18, 38 46, 46 32" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" fill="none"/>
+          <circle cx="46" cy="20" r="4" fill="#FFD54F"/>
+        </svg>
+        <span class="site-logo-text">TJ <span class="accent-text">SUGAR QUEST</span></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="#game-section" class="nav-link">Play Game</a>
+        <a href="#how-to-play" class="nav-link">How to Play</a>
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#game-section" class="btn-nav-play" id="nav-btn-play">
+          <span class="play-icon">▶</span>
+          <span>PLAY NOW</span>
+        </a>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Nav -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <nav class="mobile-nav" aria-label="Mobile Navigation">
+        <a href="#game-section" class="mobile-nav-link" data-nav-close>🎮 Play Game</a>
+        <a href="#how-to-play" class="mobile-nav-link" data-nav-close>📖 How to Play</a>
+        <a href="#features" class="mobile-nav-link" data-nav-close>✨ Features</a>
+        <a href="#about" class="mobile-nav-link" data-nav-close>ℹ️ About the Game</a>
+        <a href="#contact" class="mobile-nav-link" data-nav-close>✉️ Contact & FAQ</a>
+        <a href="#privacy-policy" class="mobile-nav-link" data-nav-close>🔒 Privacy Policy</a>
+        <a href="#terms-of-use" class="mobile-nav-link" data-nav-close>📜 Terms of Use</a>
+        <a href="#game-section" class="btn btn-primary mobile-play-cta" data-nav-close>
+          ▶ PLAY TJ SUGAR QUEST NOW
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       HERO SECTION
+       ========================================================= -->
+  <section id="hero" class="hero-section">
+    <div class="hero-orb orb-1"></div>
+    <div class="hero-orb orb-2"></div>
+    
+    <div class="site-container hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-sparkle">✨</span>
+          <span>100% Free Browser Game • Zero Downloads</span>
+        </div>
+
+        <h1 class="hero-title">
+          The Sweetest <br>
+          <span class="gradient-text">Match-3 Adventure</span> <br>
+          Awaits You!
+        </h1>
+
+        <p class="hero-description">
+          Swap delicious candies, forge explosive Striped Lasers and Rainbow Cores, and blast through 
+          <strong>15 handcrafted levels</strong> across 5 magical candy kingdoms. Play directly in your 
+          browser on mobile, tablet, or desktop with instant load and offline progress auto-saving!
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#game-section" class="btn btn-hero-play pulse" id="hero-btn-play">
+            <span class="btn-icon">🎮</span>
+            <span>PLAY NOW - FREE</span>
+          </a>
+          <a href="#how-to-play" class="btn btn-hero-secondary">
+            <span class="btn-icon">📖</span>
+            <span>How to Play</span>
+          </a>
+        </div>
+
+        <div class="hero-trust-badges">
+          <div class="trust-badge">
+            <span class="badge-icon">⚡</span>
+            <span>Instant Load</span>
+          </div>
+          <div class="trust-badge">
+            <span class="badge-icon">📱</span>
+            <span>Mobile & Touch Ready</span>
+          </div>
+          <div class="trust-badge">
+            <span class="badge-icon">💾</span>
+            <span>Auto-Save Progress</span>
+          </div>
+          <div class="trust-badge">
+            <span class="badge-icon">🚫</span>
+            <span>Zero Ads & No Tracking</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Showcase -->
+      <div class="hero-showcase">
+        <div class="showcase-card">
+          <div class="showcase-glow"></div>
+          <div class="showcase-mascot-preview">
+            <div class="mascot-avatar hero-avatar">
+              <svg viewBox="0 0 100 100" class="mascot-svg">
+                <defs>
+                  <radialGradient id="heropipGrad" cx="35%" cy="35%" r="65%">
+                    <stop offset="0%" stop-color="#FFF59D"/>
+                    <stop offset="40%" stop-color="#FFD54F"/>
+                    <stop offset="100%" stop-color="#FF8F00"/>
+                  </radialGradient>
+                  <radialGradient id="herocheekGrad" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#FF4081" stop-opacity="0.8"/>
+                    <stop offset="100%" stop-color="#FF4081" stop-opacity="0"/>
+                  </radialGradient>
+                </defs>
+                <circle cx="24" cy="28" r="14" fill="#FF8F00" />
+                <circle cx="24" cy="28" r="9" fill="#FF4081" />
+                <circle cx="76" cy="28" r="14" fill="#FF8F00" />
+                <circle cx="76" cy="28" r="9" fill="#FF4081" />
+                <circle cx="50" cy="54" r="38" fill="url(#heropipGrad)" />
+                <circle cx="30" cy="62" r="8" fill="url(#herocheekGrad)" />
+                <circle cx="70" cy="62" r="8" fill="url(#herocheekGrad)" />
+                <ellipse cx="38" cy="48" rx="4.5" ry="6.5" fill="#212121" />
+                <circle cx="36" cy="46" r="2" fill="#FFFFFF" />
+                <ellipse cx="62" cy="48" rx="4.5" ry="6.5" fill="#212121" />
+                <circle cx="60" cy="46" r="2" fill="#FFFFFF" />
+                <path d="M 40 60 Q 50 70 60 60" stroke="#424242" stroke-width="3.5" fill="none" stroke-linecap="round" />
+                <polygon points="50,22 42,16 42,28" fill="#E91E63"/>
+                <polygon points="50,22 58,16 58,28" fill="#E91E63"/>
+                <circle cx="50" cy="22" r="4.5" fill="#00E676"/>
+              </svg>
+            </div>
+            <div class="showcase-bubble">
+              "Ready to conquer all 15 Sugar Quest levels?"
+            </div>
+          </div>
+
+          <div class="candy-floating-tray">
+            <span class="float-candy float-1" title="Strawberry">🍓</span>
+            <span class="float-candy float-2" title="Lemon">🍋</span>
+            <span class="float-candy float-3" title="Blueberry">🫐</span>
+            <span class="float-candy float-4" title="Green Apple">🍏</span>
+            <span class="float-candy float-5" title="Grape">🍇</span>
+            <span class="float-candy float-6" title="Rainbow Core">🌟</span>
+          </div>
+
+          <div class="showcase-stats">
+            <div class="s-stat">
+              <span class="s-stat-val">15</span>
+              <span class="s-stat-lbl">Levels</span>
+            </div>
+            <div class="s-stat-div"></div>
+            <div class="s-stat">
+              <span class="s-stat-val">5</span>
+              <span class="s-stat-lbl">Worlds</span>
+            </div>
+            <div class="s-stat-div"></div>
+            <div class="s-stat">
+              <span class="s-stat-val">4</span>
+              <span class="s-stat-lbl">Boosters</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       PLAYABLE GAME ARENA SECTION
+       ========================================================= -->
+  <section id="game-section" class="game-arena-section">
+    <div class="site-container">
+      <div class="section-header text-center">
+        <span class="section-tag">🎮 PLAY DIRECTLY IN YOUR BROWSER</span>
+        <h2 class="section-title">TJ Sugar Quest Arena</h2>
+        <p class="section-subtitle">
+          Jump into the action! Use touch swipe or mouse drag to match 3 or more candies.
+        </p>
+      </div>
+
+      <!-- Game Frame Controls Bar -->
+      <div class="game-frame-controls">
+        <div class="game-status-indicator">
+          <span class="status-dot"></span>
+          <span>Game Engine Ready</span>
+        </div>
+        <div class="game-actions-bar">
+          <button class="frame-tool-btn" id="btn-theater-mode" title="Toggle Fullscreen / Expanded View">
+            <span id="theater-icon">⛶</span>
+            <span id="theater-text">Theater Mode</span>
+          </button>
+          <a href="#how-to-play" class="frame-tool-btn" title="View Guide">
+            <span>❓</span>
+            <span>Rules</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- GAME CONTAINER (COMPLETE PLAYABLE GAME) -->
+      <div class="game-embed-wrapper" id="game-embed-wrapper">
+        <div id="game-container">
+          <!-- BACKGROUND DECORATIONS -->
+          <div class="bg-clouds">
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-3"></div>
+          </div>
+          <div class="bg-sugar-hills"></div>
+
+          <!-- FLOATING HUD -->
+          <header id="global-header">
+            <div class="hud-pill lives-pill" id="hud-lives-btn" title="Lives (Tap to Refill with Coins)">
+              <span class="pill-icon">❤️</span>
+              <span class="pill-value" id="hud-lives">5/5</span>
+            </div>
+            <div class="hud-pill coins-pill" id="hud-coins-btn" title="Coins (Tap for Shop)">
+              <span class="pill-icon">🪙</span>
+              <span class="pill-value" id="hud-coins">500</span>
+            </div>
+            <button class="icon-btn sound-toggle-btn" id="sound-btn" aria-label="Toggle Sound">
+              <span id="sound-icon">🔊</span>
+            </button>
+          </header>
+
+          <!-- SCREEN 1: MAIN MENU -->
+          <section id="screen-main-menu" class="screen active">
+            <div class="menu-content">
+              <!-- MASCOT -->
+              <div class="mascot-wrapper">
+                <div class="speech-bubble" id="mascot-bubble">
+                  ✨ Welcome to Sugar Quest! 100 sweet levels await!
+                </div>
+                <div class="mascot-avatar">
+                  <svg viewBox="0 0 100 100" class="mascot-svg">
+                    <defs>
+                      <radialGradient id="pipGrad" cx="35%" cy="35%" r="65%">
+                        <stop offset="0%" stop-color="#FFF59D"/>
+                        <stop offset="40%" stop-color="#FFD54F"/>
+                        <stop offset="100%" stop-color="#FF8F00"/>
+                      </radialGradient>
+                      <radialGradient id="cheekGrad" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#FF4081" stop-opacity="0.8"/>
+                        <stop offset="100%" stop-color="#FF4081" stop-opacity="0"/>
+                      </radialGradient>
+                    </defs>
+                    <circle cx="24" cy="28" r="14" fill="#FF8F00" />
+                    <circle cx="24" cy="28" r="9" fill="#FF4081" />
+                    <circle cx="76" cy="28" r="14" fill="#FF8F00" />
+                    <circle cx="76" cy="28" r="9" fill="#FF4081" />
+                    <circle cx="50" cy="54" r="38" fill="url(#pipGrad)" />
+                    <circle cx="30" cy="62" r="8" fill="url(#cheekGrad)" />
+                    <circle cx="70" cy="62" r="8" fill="url(#cheekGrad)" />
+                    <ellipse cx="38" cy="48" rx="4.5" ry="6.5" fill="#212121" />
+                    <circle cx="36" cy="46" r="2" fill="#FFFFFF" />
+                    <ellipse cx="62" cy="48" rx="4.5" ry="6.5" fill="#212121" />
+                    <circle cx="60" cy="46" r="2" fill="#FFFFFF" />
+                    <path d="M 40 60 Q 50 70 60 60" stroke="#424242" stroke-width="3.5" fill="none" stroke-linecap="round" />
+                    <polygon points="50,22 42,16 42,28" fill="#E91E63"/>
+                    <polygon points="50,22 58,16 58,28" fill="#E91E63"/>
+                    <circle cx="50" cy="22" r="4.5" fill="#00E676"/>
+                  </svg>
+                </div>
+              </div>
+
+              <!-- LOGO -->
+              <div class="logo-box">
+                <h2 class="game-title">
+                  <span class="title-tj">TJ</span>
+                  <span class="title-sugar">SUGAR</span>
+                  <span class="title-quest">QUEST</span>
+                </h2>
+                <p class="tagline">100 HANDCRAFTED LEVELS • 10 SWEET WORLDS</p>
+              </div>
+
+              <!-- HIGH SCORE BANNER -->
+              <div class="high-score-card">
+                <span class="crown-icon">👑</span>
+                <div class="high-score-info">
+                  <span class="hs-label">ALL-TIME HIGH SCORE</span>
+                  <span class="hs-value" id="menu-high-score">0</span>
+                </div>
+              </div>
+
+              <!-- MENU BUTTONS -->
+              <div class="menu-buttons">
+                <button class="btn btn-primary btn-play pulse" id="btn-play-quick">
+                  <span class="btn-icon">▶</span>
+                  <span class="btn-text" id="btn-play-text">PLAY LEVEL 1</span>
+                </button>
+
+                <button class="btn btn-secondary" id="btn-open-levels">
+                  <span class="btn-icon">🗺️</span>
+                  <span class="btn-text">100 WORLDS MAP</span>
+                </button>
+
+                <!-- FEATURE BUTTONS: DAILY, ACHIEVEMENTS, RECIPES -->
+                <div class="menu-row feature-row">
+                  <button class="btn btn-feature btn-gold" id="btn-open-daily">
+                    <span class="btn-icon">⭐</span>
+                    <span class="btn-text">DAILY</span>
+                  </button>
+                  <button class="btn btn-feature btn-green" id="btn-open-achievements">
+                    <span class="btn-icon">🏆</span>
+                    <span class="btn-text">BADGES</span>
+                  </button>
+                  <button class="btn btn-feature btn-pink" id="btn-open-collection">
+                    <span class="btn-icon">🧁</span>
+                    <span class="btn-text">RECIPES</span>
+                  </button>
+                </div>
+
+                <div class="menu-row">
+                  <button class="btn btn-small btn-purple" id="btn-open-how-to-play">
+                    <span class="btn-icon">📖</span>
+                    <span class="btn-text">RULES</span>
+                  </button>
+                  <button class="btn btn-small btn-blue" id="btn-open-shop">
+                    <span class="btn-icon">🛒</span>
+                    <span class="btn-text">SHOP</span>
+                  </button>
+                  <button class="btn btn-small btn-dark" id="btn-open-settings">
+                    <span class="btn-icon">⚙️</span>
+                    <span class="btn-text">SETTINGS</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- SCREEN 2: LEVEL SELECTOR -->
+          <section id="screen-levels" class="screen">
+            <div class="screen-header">
+              <button class="icon-btn back-btn" id="levels-back-btn" aria-label="Back to Menu">⬅</button>
+              <h3 class="screen-title">Sugar Worlds (100 Levels)</h3>
+              <div class="levels-header-stats">
+                <span id="levels-total-stars" class="stars-badge">⭐ 0/300</span>
+              </div>
+            </div>
+            <!-- WORLD NAVIGATION TABS -->
+            <div class="world-tabs-container" id="world-tabs-container">
+              <!-- Dynamically populated World tabs (1 to 10) -->
+            </div>
+            <div class="levels-scroll-container" id="levels-container">
+              <!-- Dynamically populated 100 level cards -->
+            </div>
+          </section>
+
+          <!-- SCREEN 3: ACTIVE GAME BOARD -->
+          <section id="screen-game" class="screen">
+            <!-- GAME HEADER -->
+            <div class="game-hud-bar">
+              <div class="hud-box level-indicator">
+                <span class="hud-label">LEVEL</span>
+                <span class="hud-val" id="game-level-name">1</span>
+              </div>
+              <div class="hud-box moves-indicator">
+                <span class="hud-label">MOVES</span>
+                <span class="hud-val highlight" id="game-moves">20</span>
+              </div>
+              <div class="hud-box goal-indicator">
+                <span class="hud-label">GOAL</span>
+                <span class="hud-val goal-val">
+                  <span id="goal-icon">🎯</span>
+                  <span id="goal-text">1,500 pts</span>
+                </span>
+              </div>
+              <button class="icon-btn pause-btn" id="game-pause-btn" aria-label="Pause Game">⏸</button>
+            </div>
+
+            <!-- SCORE PROGRESS BAR & STARS -->
+            <div class="score-stars-bar">
+              <div class="score-display">
+                <span class="score-label">SCORE:</span>
+                <span class="score-val" id="game-score">0</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" id="score-progress-fill"></div>
+                <div class="star-mark star-1" id="star-1">★</div>
+                <div class="star-mark star-2" id="star-2">★</div>
+                <div class="star-mark star-3" id="star-3">★</div>
+              </div>
+            </div>
+
+            <!-- THE 8x8 MATCH-3 BOARD -->
+            <div class="board-wrapper">
+              <div class="floating-scores-layer" id="floating-scores-layer"></div>
+              <div class="game-board" id="game-board">
+                <!-- Dynamically populated 8x8 grid -->
+              </div>
+              <!-- COMBO CELEBRATION BANNER -->
+              <div class="combo-banner" id="combo-banner">SWEET!</div>
+            </div>
+
+            <!-- BOOSTERS TRAY -->
+            <div class="boosters-tray">
+              <button class="booster-btn" id="booster-hammer" title="Lollipop Hammer: Smash any candy or blocker">
+                <span class="booster-icon">🔨</span>
+                <span class="booster-name">Hammer</span>
+                <span class="booster-badge" id="count-hammer">2</span>
+              </button>
+              <button class="booster-btn" id="booster-swap" title="Free Swap: Switch any two adjacent candies without using a move">
+                <span class="booster-icon">🔄</span>
+                <span class="booster-name">Free Swap</span>
+                <span class="booster-badge" id="count-swap">2</span>
+              </button>
+              <button class="booster-btn" id="booster-bomb" title="Color Bomb: Turn any candy into an explosive bomb">
+                <span class="booster-icon">💣</span>
+                <span class="booster-name">Bomb</span>
+                <span class="booster-badge" id="count-bomb">1</span>
+              </button>
+              <button class="booster-btn" id="booster-rainbow" title="Rainbow Core: Turn any candy into a rainbow candy">
+                <span class="booster-icon">🌟</span>
+                <span class="booster-name">Rainbow</span>
+                <span class="booster-badge" id="count-rainbow">1</span>
+              </button>
+              <button class="booster-btn" id="booster-moves" title="+5 Moves: Add 5 emergency moves to beat the level">
+                <span class="booster-icon">➕</span>
+                <span class="booster-name">+5 Moves</span>
+                <span class="booster-badge" id="count-moves">2</span>
+              </button>
+              <button class="booster-btn booster-restart" id="game-restart-quick-btn" title="Restart Level">
+                <span class="booster-icon">↺</span>
+                <span class="booster-name">Restart</span>
+              </button>
+            </div>
+          </section>
+
+          <!-- MODAL: HOW TO PLAY (IN-GAME) -->
+          <div class="modal" id="modal-how-to-play">
+            <div class="modal-backdrop" data-close="modal-how-to-play"></div>
+            <div class="modal-card">
+              <div class="modal-header">
+                <h3>📖 How to Play</h3>
+                <button class="modal-close-btn" data-close="modal-how-to-play">✖</button>
+              </div>
+              <div class="modal-body scrollable-content">
+                <div class="rule-card">
+                  <div class="rule-icon">🍓🍊🍋</div>
+                  <div class="rule-info">
+                    <h4>Basic Match-3</h4>
+                    <p>Swap adjacent candies to line up 3 of the same kind to pop them and earn points!</p>
+                  </div>
+                </div>
+                <div class="rule-card">
+                  <div class="rule-icon">⚡</div>
+                  <div class="rule-info">
+                    <h4>Striped Candies (Match 4)</h4>
+                    <p>Match 4 in a line to create a Striped Candy. When matched, it clears a whole row or column!</p>
+                  </div>
+                </div>
+                <div class="rule-card">
+                  <div class="rule-icon">💣</div>
+                  <div class="rule-info">
+                    <h4>Sugar Bomb (L or T Shape)</h4>
+                    <p>Match 5 in an L or T shape to forge a Sugar Bomb that explodes a 3x3 surrounding zone!</p>
+                  </div>
+                </div>
+                <div class="rule-card">
+                  <div class="rule-icon">🌟</div>
+                  <div class="rule-info">
+                    <h4>Rainbow Core (Match 5 in a Line)</h4>
+                    <p>Match 5 in a straight row to forge a Rainbow Core. Swap it with any candy to clear ALL candies of that color!</p>
+                  </div>
+                </div>
+                <div class="rule-card">
+                  <div class="rule-icon">🍧🧊</div>
+                  <div class="rule-info">
+                    <h4>Jelly & Frosting</h4>
+                    <p>Match on jellies to dissolve them. Match adjacent candies to crack through frosting blockers!</p>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary" data-close="modal-how-to-play">GOT IT! 🍬</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- MODAL: SETTINGS -->
+          <div class="modal" id="modal-settings">
+            <div class="modal-backdrop" data-close="modal-settings"></div>
+            <div class="modal-card">
+              <div class="modal-header">
+                <h3>⚙️ Settings</h3>
+                <button class="modal-close-btn" data-close="modal-settings">✖</button>
+              </div>
+              <div class="modal-body">
+                <div class="setting-row">
+                  <span class="setting-label">Sound Effects (SFX)</span>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="setting-sfx-toggle" checked>
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="setting-row">
+                  <span class="setting-label">Background Melodies</span>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="setting-music-toggle" checked>
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="setting-row">
+                  <span class="setting-label">Haptic Vibration</span>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="setting-haptic-toggle" checked>
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <hr class="modal-divider">
+                <div class="setting-row">
+                  <span class="setting-label">Reset Game Progress</span>
+                  <button class="btn btn-small btn-danger" id="btn-reset-data">RESET</button>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary" data-close="modal-settings">SAVE & CLOSE</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- MODAL: BOOSTER SHOP -->
+          <div class="modal" id="modal-shop">
+            <div class="modal-backdrop" data-close="modal-shop"></div>
+            <div class="modal-card shop-modal-card">
+              <div class="modal-header">
+                <h3>🛒 Booster Shop</h3>
+                <div class="shop-balance">
+                  <span class="coin-icon">🪙</span>
+                  <span id="shop-coins-val">500</span>
+                </div>
+                <button class="modal-close-btn" data-close="modal-shop">✖</button>
+              </div>
+              <div class="modal-body scrollable-content">
+                <div class="shop-items-grid">
+                  <div class="shop-item-card" data-booster="hammer" data-cost="150">
+                    <div class="shop-item-icon">🔨</div>
+                    <div class="shop-item-name">Lollipop Hammer</div>
+                    <div class="shop-item-desc">Smash any single candy or blocker tile</div>
+                    <button class="btn btn-small btn-gold btn-buy-booster buy-btn" data-item="hammer" data-cost="150">150 🪙</button>
+                  </div>
+                  <div class="shop-item-card" data-booster="swap" data-cost="120">
+                    <div class="shop-item-icon">🔄</div>
+                    <div class="shop-item-name">Free Swap</div>
+                    <div class="shop-item-desc">Swap two adjacent candies without spending a move</div>
+                    <button class="btn btn-small btn-gold btn-buy-booster buy-btn" data-item="swap" data-cost="120">120 🪙</button>
+                  </div>
+                  <div class="shop-item-card" data-booster="bomb" data-cost="200">
+                    <div class="shop-item-icon">💣</div>
+                    <div class="shop-item-name">Sugar Bomb</div>
+                    <div class="shop-item-desc">Turns a candy into an explosive 3x3 blast</div>
+                    <button class="btn btn-small btn-gold btn-buy-booster buy-btn" data-item="bomb" data-cost="200">200 🪙</button>
+                  </div>
+                  <div class="shop-item-card" data-booster="rainbow" data-cost="250">
+                    <div class="shop-item-icon">🌟</div>
+                    <div class="shop-item-name">Rainbow Core</div>
+                    <div class="shop-item-desc">Instantly clear every candy of one color</div>
+                    <button class="btn btn-small btn-gold btn-buy-booster buy-btn" data-item="rainbow" data-cost="250">250 🪙</button>
+                  </div>
+                </div>
+                <div class="daily-bonus-card">
+                  <div class="bonus-icon">🎁</div>
+                  <div class="shop-card-info">
+                    <h4>Daily Free Bonus</h4>
+                    <p>Claim free coins once per session!</p>
+                  </div>
+                  <button class="btn btn-small btn-primary" id="btn-claim-free-coins">
+                    CLAIM +100 🪙
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- MODAL: PAUSE -->
+          <div class="modal" id="modal-pause">
+            <div class="modal-backdrop"></div>
+            <div class="modal-card pause-card">
+              <h3 class="pause-title">⏸ Game Paused</h3>
+              <p class="pause-subtitle">Take a sweet breather!</p>
+              <div class="pause-buttons">
+                <button class="btn btn-primary" id="pause-btn-resume">RESUME ▶</button>
+                <button class="btn btn-secondary" id="pause-btn-restart">RESTART 🔄</button>
+                <button class="btn btn-purple" id="pause-btn-sound">SOUND: <span id="pause-sound-status">ON</span></button>
+                <button class="btn btn-dark" id="pause-btn-menu">MAIN MENU 🏠</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- MODAL: LEVEL COMPLETE -->
+          <div class="modal" id="modal-level-complete">
+            <div class="modal-backdrop"></div>
+            <div class="modal-card celebration-card">
+              <div class="celebration-badge">SWEET VICTORY! 🎉</div>
+              <div class="victory-stars">
+                <span class="victory-star" id="win-star-1">⭐</span>
+                <span class="victory-star" id="win-star-2">⭐</span>
+                <span class="victory-star" id="win-star-3">⭐</span>
+              </div>
+              <h3 class="complete-level-title" id="win-level-title">Level 1 Cleared!</h3>
+              
+              <div class="results-box">
+                <div class="result-row">
+                  <span>Score:</span>
+                  <strong id="win-final-score">0</strong>
+                </div>
+                <div class="result-row">
+                  <span>Coins Earned:</span>
+                  <strong class="gold-text" id="win-coins-earned">+50 🪙</strong>
+                </div>
+                <div class="result-row">
+                  <span>Moves Bonus:</span>
+                  <strong id="win-moves-bonus">+500 pts</strong>
+                </div>
+              </div>
+
+              <div class="modal-actions">
+                <button class="btn btn-primary" id="win-btn-next">NEXT LEVEL ➔</button>
+                <button class="btn btn-secondary" id="win-btn-replay">REPLAY 🔄</button>
+                <button class="btn btn-dark" id="win-btn-menu">MAP 🗺️</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- MODAL: GAME OVER -->
+          <div class="modal" id="modal-game-over">
+            <div class="modal-backdrop"></div>
+            <div class="modal-card gameover-card">
+              <div class="gameover-icon">💔</div>
+              <h3 class="gameover-title">Out of Moves!</h3>
+              <p class="gameover-subtitle">Don't give up! You almost had it!</p>
+
+              <div class="gameover-stats">
+                <div>Your Score: <strong id="gameover-score">0</strong></div>
+                <div>Target Needed: <strong id="gameover-target">1,500</strong></div>
+              </div>
+
+              <div class="modal-actions">
+                <button class="btn btn-green" id="gameover-btn-extra-moves">
+                  +5 MOVES (50 🪙)
+                </button>
+                <button class="btn btn-primary" id="gameover-btn-retry">
+                  TRY AGAIN (FREE) 🔄
+                </button>
+                <button class="btn btn-dark" id="gameover-btn-menu">
+                  MAIN MENU 🏠
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- MODAL: DAILY CHALLENGE -->
+          <div class="modal" id="modal-daily-challenge">
+            <div class="modal-backdrop" data-close="modal-daily-challenge"></div>
+            <div class="modal-card daily-challenge-card">
+              <div class="modal-header">
+                <h3>⭐ Daily Sugar Challenge</h3>
+                <button class="modal-close-btn" data-close="modal-daily-challenge">✖</button>
+              </div>
+              <div class="modal-body">
+                <div class="daily-badge-row">
+                  <span class="daily-calendar-tag" id="daily-date-tag">Today</span>
+                  <span class="daily-streak-badge" id="daily-streak-badge">🔥 0-Day Streak</span>
+                </div>
+                <div class="daily-puzzle-box">
+                  <h4 id="daily-puzzle-title">The Grand Confection</h4>
+                  <p id="daily-puzzle-desc">Reach 8,000 points and clear 12 Jellies in 22 moves!</p>
+                  <div class="daily-modifier-pill" id="daily-modifier-pill">
+                    ✨ Modifier: Double Combo Multiplier
+                  </div>
+                </div>
+                <div class="daily-reward-box">
+                  <span>Daily Reward:</span>
+                  <strong class="gold-text">+150 🪙 Coins + 1 Free Hammer 🔨</strong>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary btn-play" id="btn-start-daily">
+                  START CHALLENGE ▶
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- MODAL: ACHIEVEMENTS & MILESTONES -->
+          <div class="modal" id="modal-achievements">
+            <div class="modal-backdrop" data-close="modal-achievements"></div>
+            <div class="modal-card achievements-modal-card">
+              <div class="modal-header">
+                <h3>🏆 Sweet Achievements</h3>
+                <div class="achievements-summary" id="achievements-count">0/12 Claimed</div>
+                <button class="modal-close-btn" data-close="modal-achievements">✖</button>
+              </div>
+              <div class="modal-body scrollable-content" id="achievements-list">
+                <!-- Dynamically populated achievements list with claim buttons -->
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary" data-close="modal-achievements">CLOSE</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- MODAL: SWEET RECIPE COMPENDIUM / COLLECTION -->
+          <div class="modal" id="modal-collection">
+            <div class="modal-backdrop" data-close="modal-collection"></div>
+            <div class="modal-card collection-modal-card">
+              <div class="modal-header">
+                <h3>🧁 Sugar Recipe Compendium</h3>
+                <div class="collection-summary" id="collection-count">0/10 Mastered</div>
+                <button class="modal-close-btn" data-close="modal-collection">✖</button>
+              </div>
+              <div class="modal-body scrollable-content">
+                <p class="collection-intro">Master milestone levels across the 10 Sweet Worlds to collect legendary confection recipes and unlock sweet lore!</p>
+                <div class="recipes-grid" id="recipes-grid">
+                  <!-- Dynamically populated 10 World Recipe Cards -->
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary" data-close="modal-collection">SWEET! 🍬</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- TOAST NOTIFICATION CONTAINER -->
+          <div id="toast" class="toast">Notice message</div>
+        </div>
+      </div>
+      
+      <!-- Helpful game hint below embed -->
+      <div class="game-arena-hint text-center">
+        <span>💡 Pro-Tip: Match 4 in a line to create Striped Lasers, or match 5 for the game-changing Rainbow Core!</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       HOW TO PLAY SECTION
+       ========================================================= -->
+  <section id="how-to-play" class="section-block">
+    <div class="site-container">
+      <div class="section-header text-center">
+        <span class="section-tag">📖 GAMEPLAY GUIDE</span>
+        <h2 class="section-title">How to Play TJ Sugar Quest</h2>
+        <p class="section-subtitle">
+          Easy to pick up, satisfying to master! Learn the candy matching secrets below.
+        </p>
+      </div>
+
+      <div class="rules-grid">
+        <!-- Rule 1 -->
+        <div class="rule-guide-card">
+          <div class="rule-badge">1</div>
+          <div class="rule-card-icon">🍓🍋🫐</div>
+          <h3>Basic Match 3</h3>
+          <p>
+            Swap adjacent candies horizontally or vertically to line up 3 of the same fruit candy. 
+            They instantly pop, awarding score points and triggering satisfying cascades.
+          </p>
+        </div>
+
+        <!-- Rule 2 -->
+        <div class="rule-guide-card">
+          <div class="rule-badge">2</div>
+          <div class="rule-card-icon">⚡</div>
+          <h3>Striped Lasers (Match 4)</h3>
+          <p>
+            Match 4 candies in a straight line to create a Striped Candy. When popped in a subsequent match, 
+            it fires a beam clearing an entire horizontal row or vertical column!
+          </p>
+        </div>
+
+        <!-- Rule 3 -->
+        <div class="rule-guide-card">
+          <div class="rule-badge">3</div>
+          <div class="rule-card-icon">💣</div>
+          <h3>Sugar Bomb (L or T Shape)</h3>
+          <p>
+            Connect 5 candies in an intersecting "L" or "T" formation to forge a wrapped Sugar Bomb. 
+            Detonating it unleashes an explosion that wipes out a 3x3 radius!
+          </p>
+        </div>
+
+        <!-- Rule 4 -->
+        <div class="rule-guide-card">
+          <div class="rule-badge">4</div>
+          <div class="rule-card-icon">🌟</div>
+          <h3>Rainbow Core (Match 5 in a Line)</h3>
+          <p>
+            Line up 5 identical candies in a straight row to generate the ultimate Rainbow Core. 
+            Swap it with ANY neighbor candy to eliminate every single candy of that color from the entire board!
+          </p>
+        </div>
+
+        <!-- Rule 5 -->
+        <div class="rule-guide-card">
+          <div class="rule-badge">5</div>
+          <div class="rule-card-icon">💥</div>
+          <h3>Mega Special Combos</h3>
+          <p>
+            Swap two special candies directly together for unbelievable board-clearing blasts:
+            <strong>Striped + Striped</strong> creates a Cross Blast; 
+            <strong>Striped + Bomb</strong> wipes 3 full rows and columns; 
+            <strong>Rainbow + Rainbow</strong> clears the entire board!
+          </p>
+        </div>
+
+        <!-- Rule 6 -->
+        <div class="rule-guide-card">
+          <div class="rule-badge">6</div>
+          <div class="rule-card-icon">🍧🧊</div>
+          <h3>Conquer Sweet Obstacles</h3>
+          <p>
+            Clear sparkling <strong>Jellies</strong> by matching candies resting directly over them. 
+            Break crunchy <strong>Frosting</strong> blockers by creating matches right beside them!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FEATURES SECTION
+       ========================================================= -->
+  <section id="features" class="section-block bg-darker">
+    <div class="site-container">
+      <div class="section-header text-center">
+        <span class="section-tag">✨ DELICIOUS HIGHLIGHTS</span>
+        <h2 class="section-title">Why Players Love TJ Sugar Quest</h2>
+        <p class="section-subtitle">
+          Engineered for delightful casual gameplay on any screen.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <span class="feature-icon">🏰</span>
+          </div>
+          <h3>15 Handcrafted Levels</h3>
+          <p>
+            Journey across 5 enchanting worlds: Candy Town, Lemon Lake, Chocolate Mountain, Cookie Forest, and Rainbow Clouds. Each offers unique goals and blockers.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <span class="feature-icon">⚡</span>
+          </div>
+          <h3>Spectacular Cascade Combos</h3>
+          <p>
+            Watch candies tumble with buttery-smooth physics! Chain reactions trigger rewarding announcements: "Sweet!", "Tasty!", "Delicious!", and "Sugar Rush!".
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <span class="feature-icon">🛠️</span>
+          </div>
+          <h3>4 Tactical Boosters</h3>
+          <p>
+            Overcome tough puzzles using the Lollipop Hammer, Free Swap, Color Bomb, or Rainbow Core. Earn free coins from high scores or claim your daily bonus!
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <span class="feature-icon">📱</span>
+          </div>
+          <h3>Mobile-First & Touch Ready</h3>
+          <p>
+            Enjoy silky touch swipe controls with zero scroll interference. Whether on phone, tablet, or desktop with mouse drag, the game adapts flawlessly.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <span class="feature-icon">💾</span>
+          </div>
+          <h3>Offline Auto-Save</h3>
+          <p>
+            Your high scores, unlocked worlds, collected stars, and booster inventories persist securely in your browser's local storage. No logins required!
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <span class="feature-icon">🎵</span>
+          </div>
+          <h3>Synthesized Web Audio</h3>
+          <p>
+            Dynamic procedural sound effects and melodies powered by the Web Audio API. Crisp audio with zero megabytes of sound file downloads!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       ABOUT THE GAME SECTION
+       ========================================================= -->
+  <section id="about" class="section-block">
+    <div class="site-container">
+      <div class="about-card-wrapper">
+        <div class="about-grid">
+          <div class="about-text-content">
+            <span class="section-tag">ℹ️ ABOUT THE GAME</span>
+            <h2 class="about-title">A Sweet Journey Built for Pure Fun</h2>
+            <p>
+              <strong>TJ Sugar Quest</strong> was created to bring back the pure, joyful thrill of match-3 puzzle gaming. 
+              Guided by Pip—our cheerful candy explorer mascot—players embark on an epic quest through sugar-dusted valleys, 
+              fizzy lemon lakes, and cloud-top confectionery castles.
+            </p>
+            <p>
+              Unlike bloated modern mobile games filled with paywalls, countdown timers that lock you out, and intrusive ads, 
+              <strong>TJ Sugar Quest is 100% free and client-side</strong>. It runs directly inside modern web browsers with zero installation, 
+              zero trackers, and zero server wait times.
+            </p>
+
+            <div class="tech-specs-box">
+              <h4>🛠️ Pure Web Engineering Highlights</h4>
+              <ul class="specs-list">
+                <li><strong>Zero Dependencies:</strong> Built with clean HTML5, modern CSS Grid/Flexbox, and lightweight Vanilla ES6+ JavaScript.</li>
+                <li><strong>Ultra Lightweight:</strong> The entire website and game engine loads in under 100 KB total payload.</li>
+                <li><strong>Privacy First:</strong> No personal data harvested, no advertising cookies, no third-party telemetry.</li>
+                <li><strong>Deploy Anywhere:</strong> Standard static files ready for instant hosting on Vercel, Netlify, GitHub Pages, Cloudflare, or Apache/Nginx.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="about-visual">
+            <div class="about-mascot-card">
+              <div class="about-pip-container">
+                <svg viewBox="0 0 100 100" class="about-pip-svg">
+                  <circle cx="50" cy="50" r="46" fill="#4A148C" stroke="#FFD54F" stroke-width="3"/>
+                  <circle cx="28" cy="30" r="14" fill="#FF8F00" />
+                  <circle cx="28" cy="30" r="9" fill="#FF4081" />
+                  <circle cx="72" cy="30" r="14" fill="#FF8F00" />
+                  <circle cx="72" cy="30" r="9" fill="#FF4081" />
+                  <circle cx="50" cy="55" r="34" fill="#FFD54F" />
+                  <circle cx="34" cy="62" r="7" fill="#FF4081" opacity="0.8"/>
+                  <circle cx="66" cy="62" r="7" fill="#FF4081" opacity="0.8"/>
+                  <ellipse cx="40" cy="50" rx="4" ry="6" fill="#212121" />
+                  <circle cx="38" cy="48" r="1.8" fill="#FFFFFF" />
+                  <ellipse cx="60" cy="50" rx="4" ry="6" fill="#212121" />
+                  <circle cx="58" cy="48" r="1.8" fill="#FFFFFF" />
+                  <path d="M 42 60 Q 50 68 58 60" stroke="#424242" stroke-width="3" fill="none" stroke-linecap="round" />
+                </svg>
+              </div>
+              <h3>Pip the Explorer</h3>
+              <p class="about-role">Chief Sugar Confectioner</p>
+              <blockquote class="about-quote">
+                "Every sweet puzzle has a solution. Just match with your heart and blast with a smile!"
+              </blockquote>
+              <a href="#game-section" class="btn btn-primary btn-small btn-about-play">Play with Pip ▶</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       CONTACT & FAQ SECTION
+       ========================================================= -->
+  <section id="contact" class="section-block bg-darker">
+    <div class="site-container">
+      <div class="section-header text-center">
+        <span class="section-tag">✉️ GET IN TOUCH</span>
+        <h2 class="section-title">Contact Us & Player FAQ</h2>
+        <p class="section-subtitle">
+          Have feedback, discovered a bug, or have a suggestion for new levels? Send us a note!
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <div class="contact-form-card">
+          <h3 class="form-title">Send a Message</h3>
+          <p class="form-subtitle">We read every message and appreciate your support.</p>
+
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-group">
+              <label for="contact-name">Your Name</label>
+              <input type="text" id="contact-name" name="name" class="form-control" placeholder="e.g. Alex Sugar" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email">Email Address</label>
+              <input type="email" id="contact-email" name="email" class="form-control" placeholder="e.g. alex@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-subject">Topic</label>
+              <select id="contact-subject" name="subject" class="form-control">
+                <option value="general">General Feedback</option>
+                <option value="bug">Report a Bug / Issue</option>
+                <option value="idea">Level or Feature Idea</option>
+                <option value="partnership">Web Hosting / Publishing</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" rows="4" class="form-control" placeholder="Tell us how we can make TJ Sugar Quest even sweeter..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-submit-form" id="btn-submit-contact">
+              <span class="btn-icon">📨</span>
+              <span>Send Message</span>
+            </button>
+          </form>
+
+          <div id="contact-feedback" class="contact-feedback"></div>
+        </div>
+
+        <!-- FAQ Cards -->
+        <div class="faq-container">
+          <h3 class="faq-title">Frequently Asked Questions</h3>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Is TJ Sugar Quest really 100% free?</span>
+              <span class="faq-toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Yes! All 15 levels, boosters, and features are completely free to play directly in your web browser. There are no paid microtransactions or subscriptions.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Will my progress and high score be saved?</span>
+              <span class="faq-toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Yes! Your stars, unlocked worlds, highest score, coins, and booster inventory are automatically stored in your browser's local storage whenever you play.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>How do lives regenerate?</span>
+              <span class="faq-toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              You start with 5 maximum lives. When you fail a level, 1 life is consumed. 1 life automatically regenerates every 15 minutes, or you can instantly refill your lives for 100 coins by tapping the heart HUD pill!
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Can I play this on my iPhone, Android, or tablet?</span>
+              <span class="faq-toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Absolutely. TJ Sugar Quest was built mobile-first. It responds cleanly to touch swipe gestures, tap-to-swap, and scales to fit any phone, foldable, tablet, or desktop monitor.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Can I host or deploy this game on my own website?</span>
+              <span class="faq-toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Yes! Because the codebase consists of clean static HTML, CSS, and JS with zero external backend dependencies, you can deploy it to any web hosting service (GitHub Pages, Netlify, Vercel, S3, or Nginx) in seconds.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       PRIVACY POLICY SECTION (PRODUCTION-READY PLACEHOLDER)
+       ========================================================= -->
+  <section id="privacy-policy" class="section-block legal-section">
+    <div class="site-container">
+      <div class="legal-card">
+        <div class="legal-header">
+          <span class="section-tag">🔒 DATA PRIVACY</span>
+          <h2 class="legal-title">Privacy Policy</h2>
+          <p class="legal-updated">Last Updated: September 2026</p>
+        </div>
+
+        <div class="legal-body">
+          <div class="legal-notice-box">
+            <span class="notice-icon">📋</span>
+            <div>
+              <strong>Publisher Customization Note:</strong> Prior to commercial public launch, replace all bracketed items such as <code>[Your Legal Entity Name]</code>, <code>[privacy@yourdomain.com]</code>, and <code>[Your Jurisdiction]</code> with your actual organization details.
+            </div>
+          </div>
+
+          <p>
+            Welcome to <strong>TJ Sugar Quest</strong>, operated by <strong>[Your Company / Legal Entity Name, e.g. TJ Gaming Studios LLC]</strong> ("we", "our", or "the Game"). We are committed to protecting your privacy 
+            and ensuring a completely transparent and safe gaming experience for players of all ages.
+          </p>
+
+          <h3>1. Information We Do NOT Collect</h3>
+          <p>
+            TJ Sugar Quest is an entirely client-side web browser application. We do not require account registration, usernames, 
+            passwords, phone numbers, or credit card details. We do not harvest, sell, rent, or monetize any personal data.
+          </p>
+
+          <h3>2. Local Storage Usage</h3>
+          <p>
+            To deliver an uninterrupted gaming experience, the Game utilizes your browser's standard HTML5 
+            <code>localStorage</code> mechanism to save your game state locally on your own device. The data saved includes:
+          </p>
+          <ul>
+            <li>Your all-time high score and individual level star ratings</li>
+            <li>Your current unlocked level progress (Levels 1 through 15)</li>
+            <li>Your virtual in-game coin balance and booster item quantities</li>
+            <li>Your audio preferences (Sound Effects and Music toggles)</li>
+            <li>Timestamp of your last daily free bonus claim and life regeneration</li>
+          </ul>
+          <p>
+            This data remains exclusively on your device and is never transmitted to external servers. You can clear this data 
+            at any time by clicking "Reset Progress" in the in-game Settings menu or by clearing your browser's site data.
+          </p>
+
+          <h3>3. Cookies and Third-Party Tracking</h3>
+          <p>
+            TJ Sugar Quest does not employ third-party advertising cookies, fingerprinting technology, or behavioral tracking scripts. 
+            There are no third-party advertisements embedded in the application.
+          </p>
+
+          <h3>4. Children's Privacy</h3>
+          <p>
+            Our game is safe, family-friendly, and suitable for all ages. We comply with the spirit of the Children's Online Privacy 
+            Protection Act (COPPA) and international privacy frameworks by collecting zero personal data from any user, including children.
+          </p>
+
+          <h3>5. Contact for Privacy Inquiries</h3>
+          <p>
+            If you have any questions or concerns regarding our privacy practices, please contact our designated privacy officer at:
+            <br>
+            <strong>Entity:</strong> [Your Company / Publisher Legal Entity Name]
+            <br>
+            <strong>Email:</strong> <code>[privacy@tjsugarquest.com / support@yourdomain.com]</code>
+            <br>
+            <strong>Physical Address:</strong> [Your Registered Business Address, City, State, Country]
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       TERMS OF USE SECTION (PRODUCTION-READY PLACEHOLDER)
+       ========================================================= -->
+  <section id="terms-of-use" class="section-block bg-darker legal-section">
+    <div class="site-container">
+      <div class="legal-card">
+        <div class="legal-header">
+          <span class="section-tag">📜 LEGAL AGREEMENT</span>
+          <h2 class="legal-title">Terms of Use</h2>
+          <p class="legal-updated">Last Updated: September 2026</p>
+        </div>
+
+        <div class="legal-body">
+          <div class="legal-notice-box">
+            <span class="notice-icon">📋</span>
+            <div>
+              <strong>Publisher Customization Note:</strong> Customize the governing law jurisdiction <code>[Your State / Country]</code> and publisher details below to reflect your legal registration.
+            </div>
+          </div>
+
+          <p>
+            By accessing or playing <strong>TJ Sugar Quest</strong> (the "Game"), provided by <strong>[Your Company / Legal Entity Name]</strong>, you agree to be bound by the following terms and conditions. 
+            If you do not agree with any part of these terms, please discontinue use of the game.
+          </p>
+
+          <h3>1. License & Permitted Use</h3>
+          <p>
+            We grant you a personal, non-exclusive, non-transferable, revocable license to access and play TJ Sugar Quest for 
+            personal, non-commercial entertainment purposes via compatible web browsers and devices.
+          </p>
+
+          <h3>2. Intellectual Property Rights</h3>
+          <p>
+            All original code, game mechanics, visual presentations, characters (including Pip the Sugar Explorer), SVG artwork, 
+            procedural audio algorithms, and design layouts are the intellectual property of the TJ Sugar Quest development team 
+            and <strong>[Your Legal Entity Name]</strong>. All rights not expressly granted herein are reserved.
+          </p>
+
+          <h3>3. In-Game Virtual Items & Currencies</h3>
+          <p>
+            All virtual items, including in-game coins, boosters (Lollipop Hammers, Free Swaps, Bombs, Rainbow Cores), and lives, 
+            are strictly virtual entertainment tokens. They hold zero monetary cash value, cannot be redeemed for real money or goods, 
+            and exist solely within your local game session.
+          </p>
+
+          <h3>4. Fair Play & Prohibited Activities</h3>
+          <p>
+            You agree not to modify, reverse-engineer, decompile, or inject malicious code into the game, nor use automated bots, 
+            exploits, or scripts to disrupt or degrade the service for others.
+          </p>
+
+          <h3>5. Disclaimer of Warranties</h3>
+          <p>
+            TJ Sugar Quest is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind, whether express or 
+            implied. We do not guarantee uninterrupted, error-free gameplay or that the service will remain available indefinitely.
+          </p>
+
+          <h3>6. Limitation of Liability</h3>
+          <p>
+            In no event shall <strong>[Your Legal Entity Name]</strong>, its developers, or affiliates be liable for any direct, indirect, incidental, 
+            or consequential damages arising from the use or inability to use the game.
+          </p>
+
+          <h3>7. Governing Law & Jurisdiction</h3>
+          <p>
+            These terms shall be governed by and construed in accordance with the laws of <strong>[Your State / Country Jurisdiction, e.g. State of Delaware, United States]</strong>, without regard to conflict of law principles.
+          </p>
+
+          <h3>8. Modifications to Terms</h3>
+          <p>
+            We reserve the right to revise these Terms of Use at any time. Your continued use of the website following any posted 
+            changes constitutes acceptance of the revised terms.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       WEBSITE FOOTER
+       ========================================================= -->
+  <footer id="site-footer">
+    <div class="site-container footer-container">
+      <div class="footer-brand-col">
+        <a href="#hero" class="site-logo">
+          <svg class="site-logo-icon" viewBox="0 0 64 64">
+            <circle cx="32" cy="32" r="28" fill="#FF4081" stroke="#FFD54F" stroke-width="3"/>
+            <path d="M18 32 C 26 18, 38 46, 46 32" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" fill="none"/>
+            <circle cx="46" cy="20" r="4" fill="#FFD54F"/>
+          </svg>
+          <span class="site-logo-text">TJ <span class="accent-text">SUGAR QUEST</span></span>
+        </a>
+        <p class="footer-tagline">
+          The colorful, family-friendly match-3 puzzle adventure. Match, blast, and explore directly in your web browser!
+        </p>
+        <div class="footer-social-icons">
+          <span class="social-pill">🍬 100% Free</span>
+          <span class="social-pill">📱 Mobile Ready</span>
+          <span class="social-pill">⚡ Fast & Offline</span>
+        </div>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#game-section">Play Game</a></li>
+          <li><a href="#how-to-play">How to Play</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About the Game</a></li>
+          <li><a href="#contact">Contact & FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Legal & Privacy</h4>
+        <ul>
+          <li><a href="#privacy-policy">Privacy Policy</a></li>
+          <li><a href="#terms-of-use">Terms of Use</a></li>
+          <li><a href="#contact">Report an Issue</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-action-col">
+        <h4>Ready to Blast?</h4>
+        <p>Jump into Level 1 and test your candy puzzle skills!</p>
+        <a href="#game-section" class="btn btn-primary footer-play-btn">
+          ▶ PLAY NOW
+        </a>
+        <a href="#site-header" class="back-to-top-btn" id="back-to-top-btn" title="Back to top">
+          ↑ Back to Top
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <div class="site-container footer-bottom-container">
+        <p>© 2026 TJ Sugar Quest. All rights reserved. Created for pure puzzle enjoyment.</p>
+        <p class="footer-tech-note">Built with HTML5, CSS3, & Modern JavaScript.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

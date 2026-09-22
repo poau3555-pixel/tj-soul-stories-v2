@@ -1,0 +1,6 @@
+{
+  "name": "TJ Sugar Quest",
+  "description": "A Sweet Adventure Beyond Imagination! Original match-3 puzzle game featuring Pip the Sugar Explorer, 100 dynamic levels across 10 sweet worlds, satisfying blast particles, screen shakes, combos, boosters, daily challenges, and recipe collection.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
